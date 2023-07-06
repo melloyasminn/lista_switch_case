@@ -9,9 +9,23 @@
 
     // ENTRADA
 
+    const idadeinicial = Number(prompt(`Qual a idade humana do seu cachorro?`))
+    const porte = prompt(`Qual o porte do seu cachorro? Responda P para pequeno, M para médio e G para grande`).toUpperCase()
     
     // PROCESSAMENTO
-
+    switch (porte) {
+        case "P":
+        const pp = idadeinicial* 5
+        alert(`Na idade dos cachorros, o seu cachorro tem ${pp} anos`)
+            break;
+        case "M":
+        const pm = idadeinicial * 6
+        alert(`Na idade dos cachorros, o seu cachorro tem ${pm} anos`)
+        case "G":  
+        const pg = idadeinicial * 7 
+        alert(`Na idade dos cachorros, o seu cachorro tem ${pg} anos`)
+     
+    }
     
     // SAÍDA
 

@@ -5,10 +5,18 @@
     */
 
     //ENTRADA
-
-    
+    const numero = Number(prompt(`Informe um número`))
+    const parimpar = numero % 2
     //PROCESSAMENTO
-
+    switch (parimpar) {
+        case 0:
+            alert(`Par`)
+            break;
+    
+        default:
+            alert(`Impar`)
+            break;
+    }
     
     //SAÍDA
 

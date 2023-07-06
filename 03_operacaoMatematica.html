@@ -8,11 +8,65 @@
     */
 
     //ENTRADA
-
+    const n1 = Number(prompt(`Informe um número`).trim().replace(",", "."));
+    const n2 = Number(prompt(`Informe outro número`).trim().replace(",", "."))
+    const operacao = prompt(`Qual operação você deseja realizar?  Responda com: "+" para soma, "-" para subtração, "*" para multiplicação ou "/" para divisão`).toLowerCase().trim()
+    let conta = 0
+    let mensagem = "";
 
     //PROCESSAMENTO
+    switch (operacao) {
+        case "+": 
+            conta = n1 + n2
+            break;
+        case "-": 
+            conta = n1 - n2
+            break;
+        case "*": 
+            conta = n1 * n2
+            break;
+        case "/": 
+            conta = n1 / n2
+            break;
+    }
+    mensagem = mensagem + `O resultado da operação é ${conta}. `;
+    switch (conta % 2) {
+        case 0: 
+            mensagem = mensagem + `Este número é par, `
+            break;
+        default: 
+            mensagem = mensagem + `Este número é ímpar, `
+            break;
 
+    }
+
+    switch (Number.isInteger(conta)) {
+        case true:
+            mensagem = mensagem + `inteiro e `;
+            break;
     
+        default:
+            mensagem = mensagem + `decimal e `
+            break;
+    }
+
+    switch (conta > 0) {
+        case true:
+            mensagem= mensagem + `positivo.`
+            
+            break;
+    
+        default:
+            mensagem = mensagem + `negativo.`
+            break;
+    }
+
+
+    switch(conta){
+        case 0:
+            mensagem= `O número é zero`
+    }
+    alert(mensagem)
     //SAÍDA
 
 </script>
